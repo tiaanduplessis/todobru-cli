@@ -1,0 +1,33 @@
+{
+  "name": "todobru-cli",
+  "version": "1.0.0",
+  "description": "Scan project for TODOs, FIXMEs, HACKs or whatever",
+  "main": "index.js",
+  "repository": "https://github/tiaanduplessis/todobru-cli",
+  "author": "Tiaan du Plessis",
+  "license": "MIT",
+  "scripts": {
+    "lint": "standard --fix"
+  },
+  "bin": {
+    "todobru": "index.js"
+  },
+  "keywords": [
+    "cli",
+    "todos",
+    "scan",
+    "todobru"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "cli-table2": "^0.2.0",
+    "get-them-args": "^1.3.2",
+    "todobru": "^1.0.1"
+  },
+  "devDependencies": {
+    "standard": "^12.0.1"
+  }
+}
