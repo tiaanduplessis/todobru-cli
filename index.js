@@ -18,7 +18,7 @@ if (fs.existsSync(gitignore)) {
 }
 
 if (args.ignore && args.ignore.length) {
-  ignore = [...ignore, ...args.ignore]
+  ignore = [...ignore, ...(typeof args.ignore === 'string' ? [args.ignore] : args.ignore)]
 }
 
 const config = Object.assign(args, { ignore })

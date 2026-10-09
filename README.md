@@ -35,6 +35,23 @@ $ yarn global add todobru-cli
 $ todobru
 ```
 
+Pass a single file pattern with `--ignore`, or a JSON array of patterns. Quote
+patterns so your shell passes them to the CLI unchanged:
+
+```sh
+$ todobru --ignore '*.js'
+$ todobru --ignore '["*.js", "*.md"]'
+```
+
+These patterns are appended to the entries read from `.gitignore` in the current
+directory. Repeating `--ignore` uses the last value, as with the other options.
+
+## Development
+
+`npm test` checks CLI argument forwarding and output with the real argument
+parser, owned temporary `.gitignore` files, and guarded scanner and formatting
+providers. It does not scan the checkout or run the formatter dependencies.
+
 ## Contribute
 
 1. Fork it and create your feature branch: `git checkout -b my-new-feature`
